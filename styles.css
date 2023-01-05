@@ -1,35 +1,58 @@
-.calculator {
-    
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+/* Created a Linear gradient fo the background of calculator that expands the entire page */
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, orange, blue);
+}
+/* Created the general calculator grid where it is aligned in the middle and has 4 columns and 5 rows */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+/* Button styling for the calculator */
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* Button hover styling */
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* Created the two column span for the All Clear button and the Equals button */
+.span-two {
+  grid-column: span 2;
+}
+/* Styled display to with word wrap and break for any long text */
 .display {
-    background-color: blanchedalmond;
-    width: 300px;
-    height: 100px;
-    border-top: solid 15px #36454F;
-    border-left: solid 15px #36454F;
-    border-right: solid 15px #36454F;
-    border-bottom: solid 20px #36454F;
-    border-radius: 15px 15px 0 0;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
-.all-buttons {
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);   
-    height: 350px; 
-    border: solid 15px #36454F;
-    grid-gap: 5px;
-    background-color: #36454F;
-    border-radius: 0 0 15px 15px;
-    
+/* Styling for the previous operand which appears above the current operand */
+.display .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
 }
-
-.equal {
-    width: auto;
-    grid-column: span 2;
-    border-radius: 15px;
-}
-
-button {
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 2px black;
+/* Styling for the current operand which appears below the previous operand */
+.display .current-operand {
+  color: white;
+  font-size: 2.5rem;
 }

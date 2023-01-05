@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
     <title>Calculator</title>
-</head>
-<body>
-    <div class="calculator">
-        <div class="display">
-            <div class="calcDisplay">display here</div>
-        </div>
-        <div class="all-buttons">
-            <button class="allClear">AC</button>
-            <button class="clear">C</button>
-            <button class="operators">%</button>
-            <button class="operators">&divide;</button>
-            <button class="numbers">7</button>
-            <button class="numbers">8</button>
-            <button class="numbers">9</button>
-            <button class="operators">+</button>
-            <button class="numbers">4</button>
-            <button class="numbers">5</button>
-            <button class="numbers">6</button>
-            <button class="operators">-</button>
-            <button class="numbers">1</button>
-            <button class="numbers">2</button>
-            <button class="numbers">3</button>
-            <button class="operators">x</button>
-            <button class="numbers">0</button>
-            <button class="decimal">.</button>
-            <button class="equal">=</button>
-        </div>
+  </head>
+  <body>
+    <!-- Grid container for the calculator -->
+    <div class="calculator-grid">
+      <!-- Display for both the current and previous operands -->
+      <div class="display">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <!-- Buttons for calculator -->
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete>C</button>
+      <button data-operation>÷</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>+</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>-</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>x</button>
+      <button data-number>0</button>
+      <button data-number>.</button>
+      <button data-equals class="span-two">=</button>
     </div>
-<script type="text/javascript src="scripts.js"></script>
-</body>
+  </body>
 </html>
